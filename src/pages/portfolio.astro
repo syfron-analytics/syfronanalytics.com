@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Portfolio — Syfron Analytics">
+  <Navbar />
+
+  <section class="pt-32 pb-24">
+    <div class="max-w-6xl mx-auto px-6 relative">
+      <div class="absolute top-0 left-1/2 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -z-10 -translate-x-1/2"></div>
+
+      <span class="inline-block text-xs font-mono text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full mb-6 uppercase tracking-wider">Portfolio</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-i18n="portfolio.title" data-animate>Portfolio</h1>
+      <p class="text-dark-400 text-lg mb-16" data-i18n="portfolio.intro" data-animate>Proyectos seleccionados donde se aplicaron métodos científicos y pensamiento basado en datos a problemas reales.</p>
+
+      <!-- EduMediCrit -->
+      <div class="p-8 md:p-12 rounded-2xl border border-dark-800 bg-gradient-to-br from-dark-900/80 to-emerald-600/5" data-animate>
+        <div class="flex items-start gap-4 mb-6">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <div>
+            <h2 class="text-2xl font-bold text-white" data-i18n="portfolio.case.title">EduMediCrit</h2>
+            <p class="text-emerald-400 text-sm font-mono" data-i18n="portfolio.case.subtitle">Evaluación del pensamiento crítico en educación médica</p>
+          </div>
+        </div>
+        <p class="text-dark-300 leading-relaxed mb-8 max-w-3xl" data-i18n="portfolio.case.desc">
+          EduMediCrit es un proyecto de investigación basado en datos enfocado en evaluar las capacidades de pensamiento crítico en educación médica mediante métodos analíticos avanzados. El proyecto analizó datos de más de 3.000 estudiantes utilizando Análisis Topológico de Datos (TDA) para descubrir patrones estructurales en el aprendizaje y el razonamiento que no son visibles a través de enfoques estadísticos convencionales. Al centrarse en la forma y estructura de los datos en lugar de en asunciones predefinidas, el proyecto aportó insights novedosos sobre cómo se desarrolla el pensamiento crítico en grandes cohortes de estudiantes.
+        </p>
+        <div class="grid grid-cols-3 gap-6 mb-10">
+          <div class="text-center p-4 rounded-xl bg-dark-800/50">
+            <div class="text-2xl font-bold text-white" data-count-to="3000" data-count-suffix="+">3.000+</div>
+            <div class="text-xs text-dark-400 font-mono mt-1" data-i18n="portfolio.case.stats.0.sublabel">Dataset educativo a gran escala</div>
+          </div>
+          <div class="text-center p-4 rounded-xl bg-dark-800/50">
+            <div class="text-2xl font-bold text-white">TDA</div>
+            <div class="text-xs text-dark-400 font-mono mt-1" data-i18n="portfolio.case.stats.1.sublabel">Análisis Topológico de Datos</div>
+          </div>
+          <div class="text-center p-4 rounded-xl bg-dark-800/50">
+            <div class="text-lg md:text-2xl font-bold text-white" data-i18n="portfolio.case.stats.2.value">Educación</div>
+            <div class="text-xs text-dark-400 font-mono mt-1" data-i18n="portfolio.case.stats.2.sublabel">Educación y Learning Analytics</div>
+          </div>
+        </div>
+
+        <!-- Why it matters -->
+        <div class="border-t border-dark-700/50 pt-8">
+          <h3 class="text-sm font-mono uppercase tracking-wider text-emerald-400 mb-3" data-i18n="portfolio.case.why_title">Por qué importa</h3>
+          <p class="text-dark-300 leading-relaxed max-w-3xl" data-i18n="portfolio.case.why">
+            Este proyecto demuestra cómo herramientas matemáticas avanzadas pueden revelar estructura significativa en datos complejos y de alta dimensionalidad, donde los métodos tradicionales se quedan cortos.
+          </p>
+        </div>
+      </div>
+
+      <!-- Portfolio closing -->
+      <p class="text-dark-400 italic text-center mt-16" data-i18n="portfolio.closing" data-animate>Todos los proyectos comparten un principio común: entender la estructura antes de construir soluciones.</p>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

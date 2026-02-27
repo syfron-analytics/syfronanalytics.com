@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Nosotros — Syfron Analytics">
+  <Navbar />
+
+  <section class="pt-32 pb-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Aurora accent -->
+      <div class="absolute top-20 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute top-40 left-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
+
+      <span class="inline-block text-xs font-mono text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full mb-6 uppercase tracking-wider">About</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-12" data-i18n="about.title" data-animate>Quiénes somos</h1>
+      
+      <div class="max-w-3xl space-y-8 text-dark-300 text-lg leading-relaxed">
+        <p data-i18n="about.p1" data-animate>
+          Syfron Analytics nace de la intersección entre investigación científica y resolución de problemas reales. Nuestro fundador, Enrique Rodríguez Sebastián (PhD), pasó años investigando cómo los sistemas complejos procesan información, publicando en revistas científicas de primer nivel antes de aplicar ese mismo rigor a los datos, la computación y la inteligencia artificial en contextos industriales y de investigación aplicada.
+        </p>
+        <p data-i18n="about.p2" data-animate>
+          Trabajamos con empresas, grupos de investigación y equipos técnicos que enfrentan problemas que van más allá de la analítica convencional. Nuestro enfoque no se basa en aplicar recetas predefinidas, sino en entender la estructura de cada problema y diseñar soluciones que realmente encajen. Combinamos data science, inteligencia artificial y computación científica para ir de la complejidad a la claridad: ya sea extrayendo insight de datos de alta dimensionalidad, construyendo pipelines analíticos robustos, o convirtiendo comprensión en sistemas prácticos y escalables.
+        </p>
+        <p data-i18n="about.p3" data-animate>
+          Creemos que las mejores soluciones vienen de la profundidad, no de los atajos. Por eso nuestro enfoque prioriza el rigor científico, los métodos transparentes y el valor a largo plazo frente al hype, las cajas negras o las herramientas de talla única.
+        </p>
+        <p class="text-white font-medium text-xl" data-i18n="about.p4" data-animate>
+          No vendemos herramientas. Ayudamos a entender el problema y a construir la solución correcta.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

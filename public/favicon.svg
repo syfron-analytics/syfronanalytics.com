@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="16" fill="#0f172a"/>
+  <g transform="translate(64,64) scale(0.42)" stroke="#a5b4fc" stroke-width="3.6" fill="none" stroke-linecap="round">
+    <!-- Top hexagon -->
+    <polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26" transform="translate(0,-39)"/>
+    <!-- Bottom-left hexagon -->
+    <polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26" transform="translate(-34,0)"/>
+    <!-- Bottom-right hexagon -->
+    <polygon points="0,-52 45,-26 45,26 0,52 -45,26 -45,-26" transform="translate(34,0)"/>
+  </g>
+  <!-- Center node -->
+  <circle cx="64" cy="68" r="7" fill="#818cf8"/>
+</svg>

@@ -1,0 +1,139 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Syfron Analytics">
+  <Navbar />
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <canvas id="particle-canvas" class="absolute inset-0 w-full h-full pointer-events-none" style="z-index:0;"></canvas>
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute top-1/4 -left-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute bottom-1/3 -right-32 w-80 h-80 bg-purple-500/8 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-600/5 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <img src="/logo.svg" alt="Syfron Analytics" class="h-28 md:h-36 w-auto mx-auto mb-8 invert opacity-90" />
+      <h1 class="text-5xl md:text-7xl font-bold italic text-white mb-6 tracking-tight font-mono">
+        SYFRON<span class="text-emerald-400"> ANALYTICS</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-dark-300 mb-4 font-light" data-i18n="hero.tagline">
+        De la ciencia a soluciones reales
+      </p>
+      <p class="text-dark-400 max-w-2xl mx-auto mb-12" data-i18n="hero.subtitle">
+        Data Science, Inteligencia Artificial y Computación Científica para resolver problemas complejos de negocio
+      </p>
+      <a href="/contacto" class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-medium transition shadow-lg shadow-emerald-600/20">
+        <span data-i18n="hero.cta">Hablemos</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- What we do -->
+  <section class="py-24 border-t border-dark-800/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-dark-300 text-lg leading-relaxed" data-i18n="home.whatwedo" data-animate>
+        Syfron Analytics es una consultora técnica especializada en resolver problemas complejos y mal definidos usando datos, computación e inteligencia artificial. Trabajamos donde la analítica estándar y las herramientas genéricas se quedan cortas.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services preview -->
+  <section class="py-24 border-t border-dark-800/50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-8">
+        <a href="/servicios" class="service-card group p-8 rounded-2xl border border-dark-800 bg-dark-900/50 hover:border-emerald-600/50 transition-all duration-300 block" data-animate data-animate-delay="1">
+          <div class="icon-container w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3" data-i18n="home.services.stat.title">Consultoría Estadística & Data Science</h3>
+          <p class="text-dark-400 text-sm leading-relaxed" data-i18n="home.services.stat.desc">Análisis avanzado, modelización estadística y pipelines de datos reproducibles diseñados para apoyar la toma de decisiones real. Rigor sin rigidez.</p>
+        </a>
+        <a href="/servicios" class="service-card group p-8 rounded-2xl border border-dark-800 bg-dark-900/50 hover:border-emerald-600/50 transition-all duration-300 block" data-animate data-animate-delay="2">
+          <div class="icon-container w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3" data-i18n="home.services.ai.title">Soluciones de IA</h3>
+          <p class="text-dark-400 text-sm leading-relaxed" data-i18n="home.services.ai.desc">Automatización con LLMs, agentes inteligentes y sistemas RAG integrados en flujos de trabajo reales. IA práctica para reducir trabajo manual y escalar conocimiento.</p>
+        </a>
+        <a href="/servicios" class="service-card group p-8 rounded-2xl border border-dark-800 bg-dark-900/50 hover:border-emerald-600/50 transition-all duration-300 block" data-animate data-animate-delay="3">
+          <div class="icon-container w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition">
+            <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-white mb-3" data-i18n="home.services.sci.title">Computación Científica</h3>
+          <p class="text-dark-400 text-sm leading-relaxed" data-i18n="home.services.sci.desc">Métodos avanzados para entender sistemas complejos: análisis topológico, reducción de dimensionalidad, métodos numéricos y simulación. Donde la profundidad científica se convierte en herramienta práctica.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How we work -->
+  <section class="py-24 border-t border-dark-800/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-10" data-i18n="home.how.title" data-animate>Cómo trabajamos</h2>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.how.items.0">Analizamos la estructura subyacente de cada reto</p>
+        </div>
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.how.items.1">Elegimos métodos por necesidad, no por moda</p>
+        </div>
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.how.items.2">Construimos soluciones comprensibles, mantenibles y extensibles</p>
+        </div>
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.how.items.3">Priorizamos claridad, documentación y valor a largo plazo</p>
+        </div>
+      </div>
+      <p class="text-dark-400 mt-8 italic" data-i18n="home.how.closing" data-animate>Sin cajas negras. Sin soluciones basadas en hype.</p>
+    </div>
+  </section>
+
+  <!-- Why Syfron -->
+  <section class="py-24 border-t border-dark-800/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-10" data-i18n="home.why.title" data-animate>Por qué Syfron Analytics</h2>
+      <div class="space-y-4">
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-purple-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.why.items.0">Fundada por un PhD con background en investigación científica</p>
+        </div>
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-purple-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.why.items.1">Experiencia conectando teoría e implementación</p>
+        </div>
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-purple-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.why.items.2">Cómodos con la ambigüedad y los sistemas complejos</p>
+        </div>
+        <div class="flex items-start gap-3" data-animate>
+          <span class="w-2 h-2 rounded-full bg-purple-500 mt-2.5 shrink-0"></span>
+          <p class="text-dark-300 text-lg" data-i18n="home.why.items.3">Enfocados en construir soluciones que duren, no parches rápidos</p>
+        </div>
+      </div>
+      <p class="text-white font-medium text-lg mt-8" data-i18n="home.why.closing" data-animate>Llevamos pensamiento de nivel investigador a entornos de producción.</p>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-24 border-t border-dark-800/50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-dark-300 text-lg mb-8 max-w-xl mx-auto" data-i18n="home.cta.text" data-animate>Si tu problema es complejo, ambiguo o no encaja en un framework estándar, probablemente es buena señal.</p>
+      <a href="/contacto" class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-medium transition shadow-lg shadow-emerald-600/20" data-animate>
+        <span data-i18n="home.cta.button">Hablemos</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

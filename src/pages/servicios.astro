@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Servicios — Syfron Analytics">
+  <Navbar />
+
+  <section class="pt-32 pb-24">
+    <div class="max-w-6xl mx-auto px-6 relative">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -z-10"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
+
+      <span class="inline-block text-xs font-mono text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full mb-6 uppercase tracking-wider" data-i18n="nav.services">Servicios</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-2" data-i18n="services.title" data-animate>Servicios</h1>
+      <p class="text-dark-400 mb-16 text-lg" data-i18n="services.subtitle" data-animate>Análisis, inteligencia artificial y computación científica al servicio de decisiones reales</p>
+
+      <div class="space-y-8">
+        <!-- Statistical Consulting -->
+        <div class="service-card group p-8 md:p-10 rounded-2xl border border-dark-800 bg-dark-900/50 hover:border-emerald-600/30 transition-all duration-300" data-animate>
+          <div class="flex items-start gap-6">
+            <div class="icon-container w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition">
+              <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <div class="flex-1">
+              <h2 class="text-2xl font-bold text-white mb-3" data-i18n="services.stat.title">Consultoría Estadística & Data Science</h2>
+              <p class="text-dark-300 mb-6 leading-relaxed" data-i18n="services.stat.desc">Convertimos datos complejos en decisiones claras y defendibles. Ayudamos a organizaciones a entender qué dicen realmente sus datos, y qué hacer con ellos. Desde el análisis exploratorio hasta pipelines en producción, el rigor y la claridad van primero.</p>
+              <ul class="space-y-2" data-i18n-list="services.stat.items">
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Análisis exploratorio y confirmatorio</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Pipelines robustos y workflows reproducibles</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Modelización estadística para la toma de decisiones</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Analítica avanzada para datasets complejos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Solutions -->
+        <div class="service-card group p-8 md:p-10 rounded-2xl border border-dark-800 bg-dark-900/50 hover:border-emerald-600/30 transition-all duration-300" data-animate>
+          <div class="flex items-start gap-6">
+            <div class="icon-container w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition">
+              <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="flex-1">
+              <h2 class="text-2xl font-bold text-white mb-3" data-i18n="services.ai.title">Soluciones de IA</h2>
+              <p class="text-dark-300 mb-6 leading-relaxed" data-i18n="services.ai.desc">Sistemas de IA prácticos que reducen trabajo manual y escalan conocimiento. Diseñamos y construimos soluciones que se integran en flujos de trabajo reales. Sin demos, sin hype: sistemas que ahorran tiempo y desbloquean información.</p>
+              <ul class="space-y-2" data-i18n-list="services.ai.items">
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Automatización basada en LLMs</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Agentes inteligentes y sistemas RAG</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Integración de IA en herramientas y procesos existentes</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>MVPs y herramientas internas de IA</li>
+              </ul>
+              <h3 class="text-sm font-mono uppercase tracking-wider text-emerald-400 mt-8 mb-4" data-i18n="services.ai.usecases_title">Ejemplos de aplicación</h3>
+              <ul class="space-y-2" data-i18n-list="services.ai.usecases">
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Asistentes internos de conocimiento</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Análisis y resumen automatizado de documentos</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Automatización de procesos en entornos data-heavy</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-500"></span>Herramientas de soporte a la decisión</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scientific Computing -->
+        <div class="service-card group p-8 md:p-10 rounded-2xl border border-dark-800 bg-dark-900/50 hover:border-emerald-600/30 transition-all duration-300" data-animate>
+          <div class="flex items-start gap-6">
+            <div class="icon-container w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition">
+              <svg class="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <div class="flex-1">
+              <h2 class="text-2xl font-bold text-white mb-3" data-i18n="services.sci.title">Computación Científica</h2>
+              <p class="text-dark-300 mb-6 leading-relaxed" data-i18n="services.sci.desc">Métodos avanzados para entender sistemas complejos. Cuando los problemas van más allá de la analítica convencional, aplicamos técnicas de computación científica para descubrir estructura, patrones y dinámicas ocultas en los datos.</p>
+              <ul class="space-y-2" data-i18n-list="services.sci.items">
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Análisis topológico</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Reducción de dimensionalidad</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Métodos numéricos</li>
+                <li class="text-sm text-dark-400 flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>Simulación y modelado</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connector narrative -->
+      <div class="mt-20 text-center" data-animate>
+        <div class="inline-flex items-center gap-4 text-dark-400 text-sm font-mono mb-4">
+          <span class="text-emerald-400" data-i18n="services.flow.1">Análisis</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <span class="text-purple-400" data-i18n="services.flow.2">Comprensión</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          <span class="text-white" data-i18n="services.flow.3">Automatización</span>
+        </div>
+        <p class="text-dark-300 max-w-2xl mx-auto leading-relaxed" data-i18n="services.connector">
+          La mayoría de proyectos cruzan varias áreas. El análisis de datos alimenta el modelo, los métodos científicos revelan estructura, y la IA convierte los insights en sistemas escalables.
+        </p>
+      </div>
+
+      <!-- Why work with us -->
+      <div class="mt-24 p-8 md:p-12 rounded-2xl border border-dark-800 bg-dark-900/50" data-animate>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-2" data-i18n="services.why.title">Por qué trabajar con nosotros</h2>
+        <p class="text-lg text-dark-300 mb-8 italic" data-i18n="services.why.tagline">Profundidad sin dogma. Ingeniería sin atajos. IA sin hype.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+            <p class="text-dark-300" data-i18n="services.why.items.0">Rigor científico aplicado a problemas del mundo real</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+            <p class="text-dark-300" data-i18n="services.why.items.1">Soluciones diseñadas para ser comprensibles, mantenibles y extensibles</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+            <p class="text-dark-300" data-i18n="services.why.items.2">Enfoque fuerte en documentación, reproducibilidad y propiedad del cliente</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 mt-2 shrink-0"></span>
+            <p class="text-dark-300" data-i18n="services.why.items.3">Independientes y vendor-neutral</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-20 text-center" data-animate>
+        <p class="text-dark-400 mb-6 max-w-xl mx-auto" data-i18n="services.cta.text">Si tu problema es complejo, ambiguo o mal definido, probablemente es buena señal.</p>
+        <a href="/contacto" class="inline-flex items-center gap-2 px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg font-medium transition shadow-lg shadow-emerald-600/20">
+          <span data-i18n="services.cta.button">Cuéntanos qué intentas construir</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

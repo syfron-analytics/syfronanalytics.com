@@ -1,0 +1,44 @@
+---
+import { translations } from '../i18n/translations';
+const t = translations;
+---
+
+<nav class="fixed top-0 w-full z-50 bg-dark-950/80 backdrop-blur-lg border-b border-dark-800/50">
+  <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/logo.svg" alt="Syfron" class="h-10 w-auto invert" />
+      <div class="leading-tight font-bold italic font-mono">
+        <div class="text-white text-sm tracking-wider">SYFRON</div>
+        <div class="text-dark-400 text-xs tracking-wider">ANALYTICS</div>
+      </div>
+    </a>
+    <div class="flex items-center gap-6">
+      <div class="hidden md:flex items-center gap-6 text-sm text-dark-300">
+        <a href="/nosotros" class="hover:text-emerald-400 transition" data-i18n="nav.about">Nosotros</a>
+        <a href="/servicios" class="hover:text-emerald-400 transition" data-i18n="nav.services">Servicios</a>
+        <a href="/portfolio" class="hover:text-emerald-400 transition" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="/contacto" class="hover:text-emerald-400 transition" data-i18n="nav.contact">Contacto</a>
+      </div>
+      <button class="lang-toggle text-xs font-mono px-3 py-1.5 rounded-full border border-dark-600 text-dark-300 hover:text-white hover:border-emerald-500 transition cursor-pointer">
+        EN
+      </button>
+      <!-- Mobile hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden text-dark-300 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-dark-800/50 bg-dark-950/95 backdrop-blur-lg">
+    <div class="px-6 py-4 space-y-3 text-sm text-dark-300">
+      <a href="/nosotros" class="block hover:text-emerald-400 transition" data-i18n="nav.about">Nosotros</a>
+      <a href="/servicios" class="block hover:text-emerald-400 transition" data-i18n="nav.services">Servicios</a>
+      <a href="/portfolio" class="block hover:text-emerald-400 transition" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="/contacto" class="block hover:text-emerald-400 transition" data-i18n="nav.contact">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<script is:inline define:vars={{ t }}>
+  window.__syfron_translations = t;
+</script>
