@@ -225,7 +225,7 @@ const { title, lang = 'es' } = Astro.props;
       }
 
       function getLang() {
-        return localStorage.getItem('syfron-lang') || 'es';
+        return localStorage.getItem('syfron-lang') || (navigator.language.startsWith('es') ? 'es' : 'en');
       }
 
       function setLang(lang) {
