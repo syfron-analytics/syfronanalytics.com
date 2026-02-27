@@ -1,20 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-  <g transform="translate(128,128) scale(0.42)">
-    <g transform="translate(-97,-148)">
-      <!-- Three outer hexagons -->
-      <g style="fill:none;stroke:#8b5cf6;stroke-width:3.64;stroke-linecap:round">
-        <path d="m 97.528,160.393 -44.958,-25.957 0,-51.913 44.958,-25.957 44.958,25.957 0,51.913 z" transform="translate(37.907,56.587)"/>
-        <path d="m 97.528,160.393 -44.958,-25.957 0,-51.913 44.958,-25.957 44.958,25.957 0,51.913 z" transform="translate(15.089,96.056)"/>
-        <path d="m 97.528,160.393 -44.958,-25.957 0,-51.913 44.958,-25.957 44.958,25.957 0,51.913 z" transform="translate(59.957,96.056)"/>
-      </g>
-      <!-- Center filled hexagon -->
-      <path style="fill:#8b5cf6;stroke:#8b5cf6;stroke-width:4;stroke-linecap:round" d="m 59.621,103.805 -44.958,-25.957 0,-51.913 44.958,-25.957 44.958,25.957 0,51.913 z" transform="matrix(0.2946,0,0,0.2946,79.57,130.572)"/>
-      <!-- Center lines -->
-      <g style="fill:none;stroke:#ffffff;stroke-width:0.4;stroke-linecap:round">
-        <path d="m 83.478,137.979 13.784,7.96"/>
-        <path d="m 110.811,138.02 -13.548,7.895"/>
-        <path d="m 97.14,161.644 0.121,-15.646"/>
-      </g>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="32" height="32">
+  <!-- Top hexagon -->
+  <polygon points="50,5 72,17.7 72,43 50,55.7 28,43 28,17.7" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Bottom-left hexagon -->
+  <polygon points="33,30 55,42.7 55,68 33,80.7 11,68 11,42.7" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Bottom-right hexagon -->
+  <polygon points="67,30 89,42.7 89,68 67,80.7 45,68 45,42.7" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linejoin="round"/>
+  <!-- Center dot -->
+  <circle cx="50" cy="47" r="4" fill="#8b5cf6"/>
+  <!-- Center connections -->
+  <line x1="42" y1="50" x2="48" y2="47" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="58" y1="50" x2="52" y2="47" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+  <line x1="50" y1="40" x2="50" y2="44" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
 </svg>
