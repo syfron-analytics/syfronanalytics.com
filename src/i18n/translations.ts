@@ -12,7 +12,7 @@ export const translations = {
       cta: 'Hablemos',
     },
     home: {
-      whatwedo: 'Syfron Analytics es una consultora técnica especializada en resolver problemas complejos y mal definidos usando datos, computación e inteligencia artificial. Trabajamos donde la analítica estándar y las herramientas genéricas se quedan cortas.',
+      whatwedo: 'Syfron Analytics es una consultora técnica especializada en resolver problemas complejos y difíciles de definir usando datos, computación e inteligencia artificial. Trabajamos donde la analítica estándar y las herramientas genéricas se quedan cortas.',
       services: {
         stat: {
           title: 'Consultoría Estadística & Data Science',
@@ -93,7 +93,7 @@ export const translations = {
         ],
       },
       cta: {
-        text: 'Si tu problema es complejo, ambiguo o mal definido, probablemente es buena señal.',
+        text: 'Si tu problema es complejo, ambiguo o difícil de definir, probablemente es buena señal.',
         button: 'Cuéntanos qué intentas construir',
       },
     },
@@ -137,7 +137,7 @@ export const translations = {
       cta: "Let's talk",
     },
     home: {
-      whatwedo: 'Syfron Analytics is a technical consultancy focused on solving complex, poorly defined problems using data, computation, and artificial intelligence. We work where standard analytics and off-the-shelf tools fall short.',
+      whatwedo: 'Syfron Analytics is a technical consultancy focused on solving complex, hard-to-define problems using data, computation, and artificial intelligence. We work where standard analytics and off-the-shelf tools fall short.',
       services: {
         stat: {
           title: 'Statistical Consulting & Data Science',
@@ -218,7 +218,7 @@ export const translations = {
         ],
       },
       cta: {
-        text: 'If your problem is complex, ambiguous, or poorly defined, that\'s usually a good sign.',
+        text: 'If your problem is complex, ambiguous, or hard to define, that\'s usually a good sign.',
         button: 'Tell us what you\'re trying to build',
       },
     },
