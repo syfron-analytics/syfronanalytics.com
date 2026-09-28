@@ -1,0 +1,31 @@
+---
+import { LOGO_VIEWBOX, LOGO_HEXES, LOGO_R, CORE_R, hexPoints, hexPolygon } from '../scripts/logo-geometry';
+
+interface Props {
+  class?: string;
+  [data: `data-${string}`]: unknown;
+}
+
+const { class: className, ...rest } = Astro.props;
+const vb = `${LOGO_VIEWBOX.x} ${LOGO_VIEWBOX.y} ${LOGO_VIEWBOX.w} ${LOGO_VIEWBOX.h}`;
+// The "Y" joins the upper-left, upper-right and bottom vertices of the core to its centre.
+const core = hexPoints(0, 0, CORE_R);
+const y = [5, 1, 3].map((i) => `M${core[i].x.toFixed(3)} ${core[i].y.toFixed(3)}L0 0`).join('');
+---
+
+<svg viewBox={vb} class={className} fill="none" role="img" aria-label="Syfron Analytics" {...rest}>
+  {LOGO_HEXES.map(([cx, cy]) => (
+    <polygon
+      class="logo-stroke"
+      points={hexPolygon(cx, cy, LOGO_R)}
+      pathLength="1"
+      stroke="currentColor"
+      stroke-width="2.8"
+      stroke-linecap="round"
+    />
+  ))}
+  <g class="logo-core">
+    <polygon points={hexPolygon(0, 0, CORE_R)} fill="currentColor" stroke="currentColor" stroke-width="1.2" />
+    <path d={y} stroke="#0a0a0a" stroke-width="0.9" stroke-linecap="round" />
+  </g>
+</svg>

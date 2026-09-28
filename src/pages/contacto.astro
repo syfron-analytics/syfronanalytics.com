@@ -12,9 +12,23 @@ import Footer from '../components/Footer.astro';
       <div class="absolute top-0 left-1/2 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -z-10 -translate-x-1/2"></div>
       <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl -z-10"></div>
 
-      <span class="inline-block text-xs font-mono text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full mb-6 uppercase tracking-wider">Contact</span>
+      <span class="inline-block text-xs font-mono text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full mb-6 uppercase tracking-wider" data-i18n="nav.contact">Contacto</span>
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-4" data-i18n="contact.title" data-animate>Hablemos</h1>
-      <p class="text-dark-400 mb-12 text-lg" data-i18n="contact.subtitle" data-animate>¿Trabajas en algo complejo o poco definido? Hablemos.</p>
+      <!-- Terminal: the invitation and the hint, typed out -->
+      <div class="max-w-xl mx-auto mb-12 text-left rounded-xl border border-dark-800 bg-dark-900/70 overflow-hidden shadow-2xl shadow-emerald-950/40" data-terminal data-animate>
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-dark-800/80" aria-hidden="true">
+          <span class="w-2.5 h-2.5 rounded-full bg-dark-700"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-dark-700"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></span>
+          <span class="ml-2 font-mono text-xs text-dark-500">~/syfron</span>
+        </div>
+        <div class="p-5 font-mono text-sm leading-relaxed min-h-[11rem]">
+          <p><span class="text-emerald-400 select-none" aria-hidden="true">$ </span><span class="text-dark-200" data-term-line>syfron contact --new</span></p>
+          <p class="text-white mt-3" data-term-line data-i18n="contact.subtitle">¿Trabajas en algo complejo o poco definido? Hablemos.</p>
+          <p class="text-dark-400 mt-2" data-term-line data-i18n="contact.hint">Describe brevemente tu problema y contexto. Responderemos si encaja con lo que hacemos.</p>
+          <p class="mt-3" data-term-prompt><span class="text-emerald-400 select-none" aria-hidden="true">$ </span><span class="term-cursor" data-term-cursor aria-hidden="true"></span></p>
+        </div>
+      </div>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-6" data-animate>
         <a href="mailto:contact@syfronanalytics.com" class="inline-flex items-center gap-3 px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl font-medium transition shadow-lg shadow-emerald-600/20">
@@ -51,16 +65,21 @@ import Footer from '../components/Footer.astro';
               show();
             }
             function show() {
-              fb.textContent = '✓ Copiado';
+              var t = window.__syfron_translations;
+              var lang = document.documentElement.lang === 'en' ? 'en' : 'es';
+              fb.textContent = (t && t[lang].contact.copied) || '✓ Copiado';
               fb.style.opacity = '1';
               setTimeout(function() { fb.style.opacity = '0'; }, 2000);
             }
           });
         });
       </script>
-      <p class="text-dark-500 text-xs mt-4" data-i18n="contact.hint" data-animate>Describe brevemente tu problema y contexto. Responderemos si encaja con lo que hacemos.</p>
     </div>
   </section>
 
   <Footer />
 </Layout>
+
+<script>
+  import '../scripts/terminal';
+</script>

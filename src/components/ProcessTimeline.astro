@@ -1,0 +1,40 @@
+---
+// Vertical timeline whose line fills as the visitor scrolls, lighting up each step it reaches.
+interface Item {
+  /** i18n key and default (Spanish) text of the step. */
+  key: string;
+  text: string;
+  titleKey?: string;
+  title?: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="relative" data-process>
+  <div class="process-track" data-process-track aria-hidden="true">
+    <div class="process-fill"></div>
+    <div class="process-tip"></div>
+  </div>
+  <ol class="space-y-10">
+    {items.map((item, i) => (
+      <li class="process-step flex items-start gap-6" data-step>
+        <span class="process-num" data-step-num>{String(i + 1).padStart(2, '0')}</span>
+        <div class:list={[item.title ? 'pt-2.5' : 'pt-1.5']}>
+          {item.title && (
+            <h3 class="process-title font-mono text-sm uppercase tracking-wider mb-2" data-i18n={item.titleKey}>{item.title}</h3>
+          )}
+          <p class="text-lg md:text-xl" data-i18n={item.key}>{item.text}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</div>
+
+<script>
+  import '../scripts/process';
+</script>

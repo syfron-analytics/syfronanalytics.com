@@ -12,7 +12,9 @@ export const translations = {
       cta: 'Hablemos',
     },
     home: {
+      eyebrows: { what: 'Qué hacemos', services: 'Servicios', how: 'Método', why: 'Por qué nosotros' },
       whatwedo: 'Syfron Analytics es una consultora técnica especializada en resolver problemas complejos y difíciles de definir usando datos, computación e inteligencia artificial. Trabajamos donde la analítica estándar y las herramientas genéricas se quedan cortas.',
+      whatwedo_accent: 'problemas complejos y difíciles de definir',
       services: {
         stat: {
           title: 'Consultoría Estadística & Data Science',
@@ -59,6 +61,14 @@ export const translations = {
       p2: 'Trabajamos con empresas, grupos de investigación y equipos técnicos que enfrentan problemas que van más allá de la analítica convencional. Nuestro enfoque no se basa en aplicar recetas predefinidas, sino en entender la estructura de cada problema y diseñar soluciones que realmente encajen. Combinamos data science, inteligencia artificial y computación científica para ir de la complejidad a la claridad: ya sea extrayendo insight de datos de alta dimensionalidad, construyendo pipelines analíticos robustos, o convirtiendo comprensión en sistemas prácticos y escalables.',
       p3: 'Creemos que las mejores soluciones vienen de la profundidad, no de los atajos. Por eso nuestro enfoque prioriza el rigor científico, los métodos transparentes y el valor a largo plazo frente al hype, las cajas negras o las herramientas de talla única.',
       p4: 'No vendemos herramientas. Ayudamos a entender el problema y a construir la solución correcta.',
+      founder_role: 'Fundador',
+      timeline_title: 'Trayectoria',
+      timeline: [
+        { title: 'Investigación', text: 'Años de investigación doctoral sobre cómo los sistemas complejos procesan información.' },
+        { title: 'Publicaciones', text: 'Resultados publicados en revistas científicas de primer nivel.' },
+        { title: 'Industria', text: 'El mismo rigor aplicado a datos, computación e IA en contextos industriales y de investigación aplicada.' },
+        { title: 'Syfron Analytics', text: 'De la ciencia a soluciones reales: problemas complejos, métodos transparentes y valor a largo plazo.' },
+      ],
     },
     services: {
       title: 'Servicios',
@@ -112,6 +122,17 @@ export const translations = {
         why_title: 'Por qué importa',
         why: 'Este proyecto demuestra cómo herramientas matemáticas avanzadas pueden revelar estructura significativa en datos donde los métodos tradicionales se quedan cortos.',
       },
+      tda: {
+        eyebrow: 'Explora el método',
+        title: 'Así ve el TDA la forma de los datos',
+        desc: 'Cada punto es una observación. Al aumentar el radio ε conectamos los puntos cercanos: las componentes se fusionan y aparecen y se cierran ciclos. Las estructuras que persisten a lo largo de muchas escalas son las que importan.',
+        radius: 'Radio',
+        components: 'componentes',
+        cycles: 'ciclos',
+        barcode: 'Código de barras de persistencia',
+        replay: 'Repetir',
+        note: 'Ilustración con datos sintéticos, no son datos del proyecto.',
+      },
       closing: 'Todos los proyectos comparten un principio común: entender la estructura antes de construir soluciones.',
     },
     contact: {
@@ -119,6 +140,7 @@ export const translations = {
       subtitle: '¿Trabajas en algo complejo o poco definido? Hablemos.',
       cta: 'Escríbenos',
       hint: 'Describe brevemente tu problema y contexto. Responderemos si encaja con lo que hacemos.',
+      copied: '✓ Copiado',
     },
     footer: {
       rights: '© 2026 Syfron Analytics. Todos los derechos reservados.',
@@ -137,7 +159,9 @@ export const translations = {
       cta: "Let's talk",
     },
     home: {
+      eyebrows: { what: 'What we do', services: 'Services', how: 'Approach', why: 'Why us' },
       whatwedo: 'Syfron Analytics is a technical consultancy focused on solving complex, hard-to-define problems using data, computation, and artificial intelligence. We work where standard analytics and off-the-shelf tools fall short.',
+      whatwedo_accent: 'complex, hard-to-define problems',
       services: {
         stat: {
           title: 'Statistical Consulting & Data Science',
@@ -184,6 +208,14 @@ export const translations = {
       p2: 'At Syfron Analytics, we work with companies, research groups, and technical teams facing problems that go beyond standard analytics. Our focus is not on applying predefined recipes, but on understanding the structure of each problem and designing solutions that actually fit. We combine data science, artificial intelligence, and scientific computing to move from complexity to clarity, whether that means extracting insight from high-dimensional data, building robust analytical pipelines, or turning understanding into scalable, practical systems.',
       p3: 'We believe the best solutions come from depth, not shortcuts. That\'s why our approach emphasizes scientific rigor, transparent methods, and long-term value over hype, black boxes, or one-size-fits-all tools.',
       p4: 'We don\'t sell tools. We help you understand your problem, and build the right solution for it.',
+      founder_role: 'Founder',
+      timeline_title: 'Background',
+      timeline: [
+        { title: 'Research', text: 'Years of doctoral research into how complex systems process information.' },
+        { title: 'Publications', text: 'Results published in leading scientific journals.' },
+        { title: 'Industry', text: 'The same rigor applied to data, computation and AI in industry and applied research.' },
+        { title: 'Syfron Analytics', text: 'From science to real-world solutions: complex problems, transparent methods and long-term value.' },
+      ],
     },
     services: {
       title: 'Services',
@@ -237,6 +269,17 @@ export const translations = {
         why_title: 'Why it matters',
         why: 'This project demonstrates how advanced mathematical tools can reveal meaningful structure in data where traditional methods fall short.',
       },
+      tda: {
+        eyebrow: 'Explore the method',
+        title: 'How TDA sees the shape of data',
+        desc: 'Each point is an observation. As the radius ε grows, nearby points connect: components merge, and loops appear and fill in. The structures that persist across many scales are the ones that matter.',
+        radius: 'Radius',
+        components: 'components',
+        cycles: 'loops',
+        barcode: 'Persistence barcode',
+        replay: 'Replay',
+        note: 'Illustration with synthetic data, not project data.',
+      },
       closing: 'These projects reflect a common theme: understanding structure before building solutions.',
     },
     contact: {
@@ -244,6 +287,7 @@ export const translations = {
       subtitle: 'Working on something complex or unclear? Let\'s talk.',
       cta: 'Get in touch',
       hint: 'Briefly describe your problem and context. We\'ll reply if it looks like a good fit.',
+      copied: '✓ Copied',
     },
     footer: {
       rights: '© 2026 Syfron Analytics. All rights reserved.',
