@@ -1,12 +1,26 @@
 ---
 import { translations } from '../i18n/translations';
 const t = translations;
+
+const links = [
+  { href: '/nosotros', key: 'nav.about', label: 'Nosotros' },
+  { href: '/servicios', key: 'nav.services', label: 'Servicios' },
+  { href: '/portfolio', key: 'nav.portfolio', label: 'Portfolio' },
+  { href: '/contacto', key: 'nav.contact', label: 'Contacto' },
+];
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+// On the home page the hero owns the logo transition, so the navbar logo must not share its name.
+const isHome = path === '/';
 ---
 
 <nav class="fixed top-0 w-full z-50 bg-dark-950/80 backdrop-blur-lg border-b border-dark-800/50">
   <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href="/" class="flex items-center gap-3">
-      <img src="/logo.svg" alt="Syfron" class="h-10 w-auto invert" />
+      {isHome ? (
+        <img src="/logo.svg" alt="Syfron" class="h-10 w-auto invert" />
+      ) : (
+        <img src="/logo.svg" alt="Syfron" class="h-10 w-auto invert" transition:name="brand-logo" />
+      )}
       <div class="leading-tight font-bold italic font-mono">
         <div class="text-white text-sm tracking-wider">SYFRON</div>
         <div class="text-dark-400 text-xs tracking-wider">ANALYTICS</div>
@@ -14,10 +28,16 @@ const t = translations;
     </a>
     <div class="flex items-center gap-6">
       <div class="hidden md:flex items-center gap-6 text-sm text-dark-300">
-        <a href="/nosotros" class="hover:text-emerald-400 transition" data-i18n="nav.about">Nosotros</a>
-        <a href="/servicios" class="hover:text-emerald-400 transition" data-i18n="nav.services">Servicios</a>
-        <a href="/portfolio" class="hover:text-emerald-400 transition" data-i18n="nav.portfolio">Portfolio</a>
-        <a href="/contacto" class="hover:text-emerald-400 transition" data-i18n="nav.contact">Contacto</a>
+        {links.map(({ href, key, label }) => (
+          <a
+            href={href}
+            class:list={['relative hover:text-emerald-400 transition', { 'text-white': path === href }]}
+            aria-current={path === href ? 'page' : undefined}
+          >
+            <span data-i18n={key}>{label}</span>
+            {path === href && <span class="nav-indicator" transition:name="nav-indicator" aria-hidden="true" />}
+          </a>
+        ))}
       </div>
       <button class="lang-toggle text-xs font-mono px-3 py-1.5 rounded-full border border-dark-600 text-dark-300 hover:text-white hover:border-emerald-500 transition cursor-pointer">
         EN
@@ -31,12 +51,18 @@ const t = translations;
   <!-- Mobile menu -->
   <div id="mobile-menu" class="hidden md:hidden border-t border-dark-800/50 bg-dark-950/95 backdrop-blur-lg">
     <div class="px-6 py-4 space-y-3 text-sm text-dark-300">
-      <a href="/nosotros" class="block hover:text-emerald-400 transition" data-i18n="nav.about">Nosotros</a>
-      <a href="/servicios" class="block hover:text-emerald-400 transition" data-i18n="nav.services">Servicios</a>
-      <a href="/portfolio" class="block hover:text-emerald-400 transition" data-i18n="nav.portfolio">Portfolio</a>
-      <a href="/contacto" class="block hover:text-emerald-400 transition" data-i18n="nav.contact">Contacto</a>
+      {links.map(({ href, key, label }) => (
+        <a href={href} class:list={['block hover:text-emerald-400 transition', { 'text-emerald-400': path === href }]} data-i18n={key}>{label}</a>
+      ))}
     </div>
   </div>
+  <!-- Scroll progress -->
+  <div
+    class="absolute left-0 right-0 -bottom-px h-px origin-left bg-gradient-to-r from-emerald-500 via-emerald-400 to-purple-500"
+    style="transform: scaleX(0)"
+    data-scroll-progress
+    aria-hidden="true"
+  ></div>
 </nav>
 
 <script is:inline define:vars={{ t }}>

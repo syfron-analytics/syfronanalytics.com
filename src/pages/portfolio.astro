@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+import { translations } from '../i18n/translations';
+
+const tda = translations.es.portfolio.tda;
 ---
 
 <Layout title="Portfolio — Syfron Analytics">
@@ -31,14 +34,23 @@ import Footer from '../components/Footer.astro';
         </p>
         <div class="grid grid-cols-3 gap-6 mb-10">
           <div class="text-center p-4 rounded-xl bg-dark-800/50">
+            <div class="grid grid-cols-5 gap-1 w-10 mx-auto mb-2" aria-hidden="true">
+              {Array.from({ length: 10 }, (_, i) => <span class:list={['h-1 rounded-full', i % 3 ? 'bg-emerald-400/60' : 'bg-purple-400/80']} />)}
+            </div>
             <div class="text-2xl font-bold text-white" data-count-to="3000" data-count-suffix="+">3.000+</div>
             <div class="text-xs text-dark-400 font-mono mt-1" data-i18n="portfolio.case.stats.0.sublabel">Dataset educativo a gran escala</div>
           </div>
           <div class="text-center p-4 rounded-xl bg-dark-800/50">
+            <div class="mini-barcode w-10 mx-auto mb-2 space-y-1" aria-hidden="true">
+              <span class="w-full bg-emerald-400"></span>
+              <span class="w-3/4 bg-emerald-400/70"></span>
+              <span class="w-1/2 bg-purple-400"></span>
+            </div>
             <div class="text-2xl font-bold text-white">TDA</div>
             <div class="text-xs text-dark-400 font-mono mt-1" data-i18n="portfolio.case.stats.1.sublabel">Análisis Topológico de Datos</div>
           </div>
           <div class="text-center p-4 rounded-xl bg-dark-800/50">
+            <svg class="float-y w-6 h-6 mx-auto mb-1 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0v6m-6.16-9.58L5.84 15C7.6 16.3 9.7 17 12 17s4.4-.7 6.16-2v-4.58"/></svg>
             <div class="text-lg md:text-2xl font-bold text-white" data-i18n="portfolio.case.stats.2.value">Educación</div>
             <div class="text-xs text-dark-400 font-mono mt-1" data-i18n="portfolio.case.stats.2.sublabel">Educación y Learning Analytics</div>
           </div>
@@ -53,6 +65,45 @@ import Footer from '../components/Footer.astro';
         </div>
       </div>
 
+      <!-- Interactive TDA demo (synthetic data) -->
+      <div class="mt-10 p-6 md:p-10 rounded-2xl border border-dark-800 bg-dark-900/50" data-tda data-animate>
+        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div>
+            <p class="eyebrow mb-4"><span class="eyebrow-line"></span><span data-i18n="portfolio.tda.eyebrow">{tda.eyebrow}</span></p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4" data-i18n="portfolio.tda.title">{tda.title}</h2>
+            <p class="text-dark-300 leading-relaxed mb-6" data-i18n="portfolio.tda.desc">{tda.desc}</p>
+            <div class="aspect-square max-w-md rounded-xl border border-dark-800/80 bg-dark-950/70 overflow-hidden">
+              <canvas data-tda-canvas class="block w-full h-full" aria-hidden="true"></canvas>
+            </div>
+          </div>
+          <div class="lg:pt-2">
+            <div class="flex items-center justify-between gap-4 mb-3 font-mono text-sm">
+              <label for="tda-eps" class="text-dark-300"><span data-i18n="portfolio.tda.radius">{tda.radius}</span> ε = <span class="text-white" data-tda-value>0.00</span></label>
+              <button type="button" class="inline-flex items-center gap-1.5 text-xs text-dark-400 hover:text-emerald-400 transition cursor-pointer" data-tda-replay>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                <span data-i18n="portfolio.tda.replay">{tda.replay}</span>
+              </button>
+            </div>
+            <input id="tda-eps" type="range" min="0" max="0.4" step="0.001" value="0" class="w-full accent-emerald-500 cursor-pointer mb-6" data-tda-range />
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="p-4 rounded-xl bg-dark-800/50">
+                <div class="font-mono text-xs text-emerald-400 mb-1">β₀ · <span data-i18n="portfolio.tda.components">{tda.components}</span></div>
+                <div class="text-3xl font-bold text-white" data-tda-b0>0</div>
+              </div>
+              <div class="p-4 rounded-xl bg-dark-800/50">
+                <div class="font-mono text-xs text-purple-400 mb-1">β₁ · <span data-i18n="portfolio.tda.cycles">{tda.cycles}</span></div>
+                <div class="text-3xl font-bold text-white" data-tda-b1>0</div>
+              </div>
+            </div>
+            <p class="font-mono text-xs uppercase tracking-wider text-dark-400 mb-2" data-i18n="portfolio.tda.barcode">{tda.barcode}</p>
+            <div class="h-64 lg:h-[22rem] rounded-xl border border-dark-800/80 bg-dark-950/70 overflow-hidden mb-4">
+              <canvas data-tda-barcode class="block w-full h-full" aria-hidden="true"></canvas>
+            </div>
+            <p class="text-xs text-dark-500 italic" data-i18n="portfolio.tda.note">{tda.note}</p>
+          </div>
+        </div>
+      </div>
+
       <!-- Portfolio closing -->
       <p class="text-dark-400 italic text-center mt-16" data-i18n="portfolio.closing" data-animate>Todos los proyectos comparten un principio común: entender la estructura antes de construir soluciones.</p>
     </div>
@@ -60,3 +111,7 @@ import Footer from '../components/Footer.astro';
 
   <Footer />
 </Layout>
+
+<script>
+  import '../scripts/tda';
+</script>
